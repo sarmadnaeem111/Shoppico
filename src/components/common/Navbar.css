@@ -1,0 +1,107 @@
+.navbar-animated {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientAnimation 15s ease infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  padding: 15px 0;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.navbar-animated.scrolled {
+  padding: 0.5rem 1rem;
+  background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-menu {
+  border: none;
+
+/* Cart Badge Styling */
+.cart-badge {
+  top: 0;
+  right: -10px;
+  font-size: 0.7rem;
+  transform: translateY(-50%);
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: badge-pulse 1.5s infinite;
+}
+
+@keyframes badge-pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  transition: all 0.2s ease;
+  padding: 0.5rem 1.5rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+  
+  .nav-link::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .nav-link:hover::after {
+    width: 50px;
+  }
+}

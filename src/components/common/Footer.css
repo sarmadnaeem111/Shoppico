@@ -1,0 +1,78 @@
+.footer-animated {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientAnimation 15s ease infinite;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.footer-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.footer-link {
+  transition: all 0.3s ease;
+  padding: 3px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-link:hover {
+  transform: translateX(5px);
+  color: #ffffff !important;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  color: #d0d0d0 !important;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color: #d0d0d0 !important;
+}
+
+.copyright:hover {
+  opacity: 1;
+}
+
+/* Override Bootstrap's text-muted class in footer */
+footer .text-muted {
+  color: #d0d0d0 !important;
+}
+
+/* Ensure paragraph text is visible */
+footer p {
+  color: #d0d0d0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-title::after {
+    width: 30px;
+  }
+}
