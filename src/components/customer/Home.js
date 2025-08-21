@@ -122,7 +122,7 @@ const Home = () => {
     <section className="mb-5">
       <h2 className="mb-4">Shop by Category</h2>
       <Row>
-        {categories.slice(0, 4).map((category, index) => (
+        {categories.map((category, index) => (
           <Col key={category.id} md={6} lg={3} className="mb-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -159,13 +159,6 @@ const Home = () => {
           </Col>
         ))}
       </Row>
-      {categories.length > 4 && (
-        <div className="text-center mt-3">
-          <Button as={Link} to="/products" variant="outline-primary">
-            View All Categories
-          </Button>
-        </div>
-      )}
     </section>
   );
 
