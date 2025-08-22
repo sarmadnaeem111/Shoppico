@@ -272,7 +272,7 @@ const Home = () => {
             <div className="px-3">
               <i className="bi bi-truck display-4 text-primary mb-3"></i>
               <h5>Free Shipping</h5>
-              <p className="text-muted small">On orders over {formatCurrency(500000)}</p>
+              <p className="text-muted small">On orders over {formatCurrency(10000)}</p>
             </div>
           </Col>
           <Col md={3} className="mb-4 mb-md-0">
@@ -282,13 +282,13 @@ const Home = () => {
               <p className="text-muted small">100% secure payment</p>
             </div>
           </Col>
-          <Col md={3} className="mb-4 mb-md-0">
+          {/* <Col md={3} className="mb-4 mb-md-0">
             <div className="px-3">
               <i className="bi bi-arrow-repeat display-4 text-primary mb-3"></i>
               <h5>Easy Returns</h5>
               <p className="text-muted small">14 day return policy</p>
             </div>
-          </Col>
+          </Col> */}
           <Col md={3}>
             <div className="px-3">
               <i className="bi bi-headset display-4 text-primary mb-3"></i>
