@@ -22,10 +22,11 @@ const Orders = () => {
   const fetchOrders = async (userId) => {
     try {
       setLoading(true);
+      setError(null);
       const ordersData = await getOrdersByUserId(userId);
       setOrders(ordersData);
-      setError(null);
     } catch (err) {
+      // Handle any unexpected errors gracefully
       console.error('Error fetching orders:', err);
       setError('Failed to load your orders. Please try again.');
     } finally {
