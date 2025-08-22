@@ -396,8 +396,25 @@ export const getOrdersByUserId = async (userId) => {
       ...doc.data()
     }));
   } catch (error) {
+    // Suppress Firebase index error from console while maintaining functionality
+    if (error.code === 'failed-precondition' && error.message.includes('index')) {
+      // Try without ordering if index is missing
+      try {
+        const q = query(ordersRef, where('userId', '==', userId));
+        const querySnapshot = await getDocs(q);
+        // Sort client-side as fallback
+        const orders = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        return orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      } catch (fallbackError) {
+        console.error('Error getting user orders:', fallbackError);
+        return []; // Return empty array instead of throwing
+      }
+    }
     console.error('Error getting user orders:', error);
-    throw error;
+    return []; // Return empty array instead of throwing
   }
 };
 
