@@ -116,10 +116,10 @@ const Footer = () => {
             <motion.div variants={itemVariants}>
               <h5 className="footer-title">Contact Us</h5>
               <address className="text-muted contact-info">
-                <motion.p variants={itemVariants}>123 E-Commerce Street</motion.p>
-                <motion.p variants={itemVariants}>Shopping District, SD 12345</motion.p>
-                <motion.p variants={itemVariants}>Email: info@ecommerce-store.com</motion.p>
-                <motion.p variants={itemVariants}>Phone: (123) 456-7890</motion.p>
+                // <motion.p variants={itemVariants}>123 E-Commerce Street</motion.p>
+                // <motion.p variants={itemVariants}>Shopping District, SD 12345</motion.p>
+                <motion.p variants={itemVariants}>Email: shoppico@gmail.com</motion.p>
+                <motion.p variants={itemVariants}>Phone: 03311041968</motion.p>
               </address>
             </motion.div>
           </Col>
@@ -137,7 +137,7 @@ const Footer = () => {
               variants={itemVariants}
               className="copyright"
             >
-              &copy; {currentYear} E-Commerce Store. All rights reserved.
+              &copy; {2019} E-Commerce Store. All rights reserved.
             </motion.p>
           </Col>
         </Row>
