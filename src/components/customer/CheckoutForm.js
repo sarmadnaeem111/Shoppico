@@ -91,11 +91,11 @@ const CheckoutForm = () => {
       return;
     }
 
-    if (!formData.country.trim()) {
-      setError('Country is required');
-      setSubmitting(false);
-      return;
-    }
+    // if (!formData.country.trim()) {
+    //   setError('Country is required');
+    //   setSubmitting(false);
+    //   return;
+    // }
 
     try {
       // Prepare order data
@@ -281,7 +281,7 @@ const CheckoutForm = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col md={6}>
+                  {/* <Col md={6}>
                     <Form.Group controlId="country">
                       <Form.Label>Country</Form.Label>
                       <Form.Select
@@ -302,12 +302,12 @@ const CheckoutForm = () => {
                         <option value="Other">Other</option>
                       </Form.Select>
                     </Form.Group>
-                  </Col>
+                  </Col> */}
                 </Row>
 
                 <h4 className="mb-3 mt-4">Payment Method</h4>
                 <Form.Group className="mb-3">
-                  <Form.Check
+                  {/* <Form.Check
                     type="radio"
                     id="credit_card"
                     name="paymentMethod"
@@ -336,7 +336,7 @@ const CheckoutForm = () => {
                     checked={formData.paymentMethod === 'bank_transfer'}
                     onChange={handleChange}
                     disabled={submitting}
-                  />
+                  /> */}
                   <Form.Check
                     type="radio"
                     id="cash_on_delivery"
