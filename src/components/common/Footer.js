@@ -116,8 +116,8 @@ const Footer = () => {
             <motion.div variants={itemVariants}>
               <h5 className="footer-title">Contact Us</h5>
               <address className="text-muted contact-info">
-                // <motion.p variants={itemVariants}>123 E-Commerce Street</motion.p>
-                // <motion.p variants={itemVariants}>Shopping District, SD 12345</motion.p>
+                 {/* <motion.p variants={itemVariants}>123 E-Commerce Street</motion.p>
+                 <motion.p variants={itemVariants}>Shopping District, SD 12345</motion.p> */}
                 <motion.p variants={itemVariants}>Email: shoppico@gmail.com</motion.p>
                 <motion.p variants={itemVariants}>Phone: 03311041968</motion.p>
               </address>
