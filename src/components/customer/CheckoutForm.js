@@ -67,6 +67,12 @@ const CheckoutForm = () => {
       return;
     }
 
+    if (!/^\d{11}$/.test(formData.phone.trim())) {
+      setError('Phone number must be exactly 11 digits');
+      setSubmitting(false);
+      return;
+    }
+
     if (!formData.address.trim()) {
       setError('Address is required');
       setSubmitting(false);
